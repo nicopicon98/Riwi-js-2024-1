@@ -27,9 +27,11 @@
 
 // 0. We can access the type of a variable using the constructor property of the variable.
 
-const str = 'Hello, World!';
-console.log(str.constructor.name); // String
-new Function().constructor.name; // Function
+// const str = 'Hello, World!';
+// console.log(str.constructor.name); // String
+// new Function().constructor.name; // Function
+
+// console.log(typeof {});
 
 // 1. Primitive Data Types
 
@@ -88,6 +90,7 @@ new Function().constructor.name; // Function
 // const bool = Boolean(1); // true -> Same concept as python bool(1) Truthy and Falsy
 // const bool = Boolean(0); // false
 // const bool = Boolean('Hello'); // true
+// console.log(bool);
 
 // 1.4. Undefined
 // Undefined represents undefined value.
@@ -96,7 +99,9 @@ new Function().constructor.name; // Function
 // console.log(typeof und, und);
 
 // 1.5. Null
-// Null represents null value, which means no value. but it is an object, not a primitive data type.
+// Null represents null value, which means no value. but it is an object, not a 
+// primitive data type.
+
 // const nul = null;
 // console.log(typeof nul, nul);
 
@@ -106,6 +111,7 @@ new Function().constructor.name; // Function
 // const sym2 = Symbol('foo');
 // console.log(sym1 === sym2); // false
 // console.log(typeof sym1, sym1);
+
 
 // 1.7. BigInt
 // BigInt represents integers with arbitrary precision.
@@ -127,7 +133,15 @@ new Function().constructor.name; // Function
 //         state: 'NY'
 //     }
 // };
-// console.log(typeof obj, obj);
+// const garganta = {
+//     size: 12,
+//     color: "white",
+//     hablar: function(){
+//         console.log(this.);
+//     }
+// }
+
+// console.log(garganta.hablar()()());
 
 // 2.2. Array
 // Array represents a list of elements.
@@ -140,3 +154,13 @@ new Function().constructor.name; // Function
 // const arr = Array.of(1, 2, 3); // this is the same as new Array(1, 2, 3)
 // console.log(typeof arr, arr);
 
+
+// let count = 0
+// const myFunction = () => {
+//     count++;
+//     if(count < 5) {
+//         myFunction()
+//     }
+// }
+
+// myFunction();

@@ -30,12 +30,13 @@
 
 // let vs var
 
-
-
-// if (true) {
-//     var name = "John";
-//     console.log(name); // John
-// }
-// console.log(name); 
-
 // let vs const
+
+
+// try {
+//     const myName = "Nicolas"
+//     myName = "Daniela"
+// } catch (error) {
+//     console.error("Desde aqui muchachos")
+//     // console.error(error)
+// }
