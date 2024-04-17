@@ -29,7 +29,3 @@ truthy.forEach((value) => {
         console.error(error);
     }
 });
-
-if (truthy[7]) {
-    console.log("Symbol is truthy"); 
-}

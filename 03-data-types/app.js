@@ -58,12 +58,14 @@
 // const num = Number.MIN_VALUE; // 5e-324 (Smallest number possible in JS)
 // const num = Number.POSITIVE_INFINITY; // Infinity
 // const num = Number.NEGATIVE_INFINITY; // -Infinity
+// const num = Infinity;
 // const num = Number.NaN; // NaN
 // console.log(`This type is ${typeof num}`, num);
+// console.log(typeof Number("11a"), Number("11a"));
 
 // 1.2. String 
 // String represents a sequence of characters.
-// const str = 'Hello, World!';
+// const str = 'Hello, World! "OTRA CADENA"';
 // const str = "Hello, World!";
 // const str = `Hello, World!`; // ES6 Template Literals
 
@@ -77,7 +79,7 @@
 // const bool = false;
 // const bool = 1 < 2; // true
 // const bool = 1 > 2; // false
-// const bool = 1 == 1; // true
+// const bool = 1 == "1"; // true
 // const bool = 1 === '1'; // false
 // const bool = 1 !== '1'; // true
 // const bool = 1 != '1'; // false
@@ -90,12 +92,19 @@
 // const bool = Boolean(1); // true -> Same concept as python bool(1) Truthy and Falsy
 // const bool = Boolean(0); // false
 // const bool = Boolean('Hello'); // true
-// console.log(bool);
+// console.log(typeof bool, bool);
+
+// const a = [{userName: 0, email: "nicolaspicon98@gmail.com"}]
+// console.log(a[0].userName);
+
+// if(a[0].userName){
+//     console.log("Efectivamente hay algo adentro");
+// }
 
 // 1.4. Undefined
 // Undefined represents undefined value.
 // const und = undefined;
-// const und;
+// let und;
 // console.log(typeof und, und);
 
 // 1.5. Null
@@ -124,15 +133,17 @@
 // Object represents instance through which we can access members.
 // const obj = {};
 // const obj = new Object();
-// const obj = {
-//     name: 'John Doe',
-//     age: 30,
-//     address: {
-//         street: '123 Main St',
-//         city: 'New York',
-//         state: 'NY'
-//     }
-// };
+const obj = {
+    name: 'John Doe',
+    age: 30,
+    address: {
+        street: '123 Main St',
+        city: 'New York',
+        state: 'NY'
+    }
+};
+// obj = {}
+
 // const garganta = {
 //     size: 12,
 //     color: "white",
@@ -152,7 +163,7 @@
 // const arr = [1, 'apple', true];
 // const arr = Array(1, 2, 3);
 // const arr = Array.of(1, 2, 3); // this is the same as new Array(1, 2, 3)
-// console.log(typeof arr, arr);
+console.log(typeof arr, arr);
 
 
 // let count = 0
