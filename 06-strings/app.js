@@ -34,6 +34,10 @@
 
 let message = 'Hello World!';
 
-// let's create a table with four columns, string method, description, output, mutability
+// charAt()
+console.log(message.charAt(0)); // H // which is the same as message[0]
+// charCodeAt()
+console.log(message.charCodeAt(0)); // 72 // ASCII code of 'H'
+
 
 
