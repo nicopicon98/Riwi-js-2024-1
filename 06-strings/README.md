@@ -28,5 +28,4 @@ let str = 'The quick brown fox jumps over the lazy dog.';
 | `toUpperCase()`| Converts a string to uppercase letters                                                       | No             | String       |
 | `trim()`       | Removes whitespace from both ends of a string                                                | No             | String       |
 | `valueOf()`    | Returns the primitive value of a string object                                               | No             | String       |
-| `split()`      | Splits a string into an array of substrings                                                   | No             | Array        |
 | `toString()`   | Returns the value of a String object                                                         | No             | String       |

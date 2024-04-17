@@ -7,24 +7,17 @@
  * it is defined.
  */
 
-// Example 1: Lexical scoping
+function OuterFunction() {
+  let outerVariable = 'I am outside!';
 
-// let message = 'Hello World!';
-//
-// function greet() {
-//     console.log(message);
-// }
+  function InnerFunction() {
+    let innerVariable = 'I am inside!';
+    console.log(outerVariable); // I am outside!
+  }
 
-// greet(); // Hello World!
+  console.log(innerVariable); // ReferenceError: innerVariable is not defined
 
-// Example 2: Lexical scoping
+  InnerFunction();
+}
 
-// let message = 'Hello World!';
-
-// function greet() {
-//     let message = 'Hello John!';
-//     console.log(message);
-// }
-
-// greet(); // Hello John!
-
+OuterFunction();
