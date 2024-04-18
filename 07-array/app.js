@@ -453,3 +453,24 @@ let map = new Map([
 ]);
 
 console.log(Array.from(map)); // [ [ 'name', 'John' ], [ 'age', 30 ] ]
+
+// 29. Array.isArray()
+
+// use case 1: to check if a value is an array
+
+let arr44 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+console.log(Array.isArray(arr44)); // true
+
+// 30. Array.filter()
+
+// use case 1: to filter elements in an array based on a condition and return a new array
+
+let arr45 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+let filteredArray2 = arr45.filter((element) => element > 5);
+
+console.log(filteredArray2); // [ 6, 7, 8, 9 ]
+
+// note: it works as a way to delete elements from an array by filtering out the elements 
+// you want to keep

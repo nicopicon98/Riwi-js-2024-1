@@ -3,21 +3,23 @@
  * 
  * Lexical scoping (sometimes known as static scoping ) is a convention used with 
  * many programming languages that sets the scope (range of functionality) of a variable 
- * so that it may only be called (referenced) from within the block of code in which 
- * it is defined.
+ * so that it may only be called (referenced) from within the block or many 
+ * lvl of blocks in which it is defined.
  */
 
-function OuterFunction() {
-  let outerVariable = 'I am outside!';
+let x = 'global';
 
-  function InnerFunction() {
-    let innerVariable = 'I am inside!';
-    console.log(outerVariable); // I am outside!
-  }
+function outerFunction() {
+    let x = 'outer';
 
-  console.log(innerVariable); // ReferenceError: innerVariable is not defined
+    function innerFunction() {
+        let x = 'inner';
+        console.log(x); // Muestra 'inner', accede a la x más cercana en su propio alcance.
+    }
 
-  InnerFunction();
+    console.log(x); // Muestra 'outer', porque está en el alcance de outerFunction.
+    innerFunction();
 }
 
-OuterFunction();
+outerFunction();
+console.log(x); // Muestra 'global', accede a la variable global x.
