@@ -7,7 +7,7 @@
     <style>
         #hidden-box {
             display: flex;
-            opacity: 0;
+            opacity: 1;
             height: 100vh;
             justify-content: center;
             align-items: center;
@@ -25,6 +25,21 @@
     <!-- <script src="02-variables/app.js"></script> -->
     <!-- <script src="03-data-types/app.js"></script> -->
     <!-- <script src="04-truthy-falsey/app.js"></script> -->
-    <script src="05-operators/app.js"></script>
+    <!-- <script src="05-operators/app.js"></script> -->
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const resp = await fetch('https://jsonplaceholder.typicode.com/posts');
+            // const resp = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+            const data = await resp.json();
+            console.log(data);
+            const myElement = document.getElementById('hidden-box');
+            data.forEach(element => {
+                myElement.innerHTML += `<div id=${element.id}>${element.title}</div>`;
+            });
+            // const {userId, id, title} = data
+            // document.getElementById('hidden-box').textContent = `userId: ${userId}, id: ${id}, title: ${title}`;
+        });
+    </script>
 </body>
 </html>
+
