@@ -38,5 +38,3 @@ let arr = ['The', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy', 'dog.
 | `toString()`   | Converts an array to a string                                                                | No            | String       |
 | `unshift()`    | Adds new elements to the beginning of an array                                               | Yes           | Number       |
 | `values()`     | Returns Array Iteration Object with values                                                   | No            | Array        |
-
-[]: # (end)
