@@ -3,8 +3,7 @@ const eventList = []
 let id = 0;
 while (i) {
     // Sistema de gestion de eventos
-
-    const userInput = prompt(`Por favor ingresa una de las siguientes opciones: 
+    const userInput = prompt(`Por favor ingresa una de las siguientes opciones:
                             \n 1. Crear un evento 
                             \n 2. Ver eventos
                             \n 3. Buscar eventos por nombre
@@ -13,11 +12,11 @@ while (i) {
                             \n 6. Salir`);
     switch (userInput) {
         case "1":
-            const eventName = prompt("Por favor ingresa el nombre del evento: ");
+            const eventName = prompt("Por favor ingresa el nombre del evento: ")
             const eventDate = prompt("Por favor ingresa la fecha del evento (YYYY-MM-DD): ");
             const eventDescription = prompt("Por favor ingresa la descripcion del evento: ");
             const event = Object.assign({}, {
-                id: ++id, // incrementamos el id
+                id: id++, // incrementamos el id
                 eventName, // lo mismo que eventName: eventName
                 eventDate, // lo mismo que eventDate: eventDate
                 eventDescription // lo mismo que eventDescription: eventDescription
@@ -26,14 +25,14 @@ while (i) {
             eventList.push(event);
             break;
         case "2":
-            eventList.forEach((event, index) => {
+            eventList.forEach((event, index, arr) => {
                 console.log(`Evento ${index + 1}: ${event.eventName} - ${event.eventDate} - ${event.eventDescription}`);
             });
             break;
         case "3":
             const search = prompt("Por favor ingresa el nombre del evento que deseas buscar: ");
             const foundEvents = eventList.filter(event => event.eventName === search);
-            if (foundEvents.length === 0) {
+            if (foundEvents.length === 0) { // 
                 console.log("No se encontraron eventos con ese nombre");
                 break;
             }
