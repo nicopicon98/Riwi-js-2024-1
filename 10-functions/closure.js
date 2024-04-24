@@ -18,6 +18,7 @@ function outerFunction() {
 const myNewFunction = outerFunction();
 
 console.log(myNewFunction());
+console.log(myNewFunction());
 
 
 // Detengamonos un momento en el ejemplo anterior, la función outerFunction retorna 
@@ -52,7 +53,7 @@ const myNewFunction2 = outerFunction2();
 
 console.log(myNewFunction2.plusOne());
 
-// En este ejemplo, la función outerFunction2 retorna un objeto con dos funciones, 
+// En este ejemplo, la función outerFunction2 retorna un objeto con dos funciones,
 // plusOne y minusOne, estas funciones tienen acceso a la variable count que se encuentra
 // en el scope de outerFunction2, esto es un closure.
 
