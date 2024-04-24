@@ -3,7 +3,7 @@
 ## Objetivos
 
 - Comprender los siguientes conceptos propios de Javascript:
-    - 1. Scope: Global, local, de funcion y de bloque.
+    - 1. Scope: Global, local (de funcion y de bloque).
     - 2. Funciones expresadas vs declaradas
     - 3. Hoisting y Temporal Dead Zone.
     - 4. Contexto de ejecución.
