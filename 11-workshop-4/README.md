@@ -10,7 +10,7 @@
     - 5. Callback, Promesas (Y transición)
     - 6. Event Loop.
     - 7. Closures en funciones.
-    - 8. WebAPIs.
+    - 8. WebAPIs: setTimeout, setInterval, fetch, etc.
 
 ## Introducción
 
