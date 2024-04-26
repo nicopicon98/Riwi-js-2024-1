@@ -8,6 +8,11 @@ Este taller está diseñado para aplicar y profundizar en los conceptos avanzado
 2. [Objetivos](#Objetivos)
 3. [Instrucciones](#Instrucciones)
 4. [Descripción](#Descripción)
+    - [Sección 1: Scope y Hoisting](#Sección-1-Scope-y-Hoisting)
+    - [Sección 2: Funciones, Closures y Asincronía](#Sección-2-Funciones-Closures-y-Asincronía)
+    - [Sección 3: Closures, Promesas y Web APIs](#Sección-3-Closures-Promesas-y-Web-APIs)
+    - [Sección 4: Entendiendo el Event Loop](#Sección-4-Entendiendo-el-Event-Loop)
+    - [Sección 5: Aplicando Todos los Conceptos - Proyecto de Sistema de Reservas de Hotel](#Sección-5-Aplicando-Todos-los-Conceptos---Proyecto-de-Sistema-de-Reservas-de-Hotel)
 
 ## Requisitos
 
