@@ -46,7 +46,7 @@
                     "Ingrese el numero de habitacion a reservar: " +
                     rooms
                         .map((room) => {
-                            return `\nRoom Number: ${room.number} (${roomTypes.find((type) => type.id === room.type).name
+                            return `\nRoom Number: ${room.number} (${roomTypes.find((type) => type.id === room.roomTypeId).name
                                 })`;
                         })
                         .join(", ")
