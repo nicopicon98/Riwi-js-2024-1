@@ -37,7 +37,7 @@ Este taller está diseñado para aplicar y profundizar en los conceptos avanzado
 
 **Objetivo:** Comprender y aplicar correctamente los conceptos de scope global, local y de bloque, así como el hoisting en JavaScript.
 
-- **Ejercicio 1: El Quiz de Scope**
+#### Ejercicio 1: El quiz del Scope.
 
   - Considera el siguiente condigo:
 
@@ -68,7 +68,7 @@ Este taller está diseñado para aplicar y profundizar en los conceptos avanzado
 
   - **Validación de Respuestas:** Después de ingresar tus respuestas, el script evaluará y mostrará si cada una de ellas es correcta o incorrecta, y proporcionará una explicación detallada de los resultados.
 
-- Ejercicio 2: Hoisting en Práctica
+#### Ejercicio 2: Hoisting en Práctica
 
   - Copia y pega el siguiente código en un archivo de JavaScript o en la consola de tu navegador:
 
@@ -175,7 +175,7 @@ Este ejercicio te permitirá desarrollar un script que demuestra cómo los closu
     - ¿Cómo difieren los resultados entre la función declarada y la función expresada?
     - ¿Qué indica esto sobre cómo el JavaScript maneja estas dos diferentes declaraciones de funciones?
 
-- Ejercicio 5: Promesas y Callbacks en Acción
+#### Ejercicio 5: Promesas y Callbacks en Acción
 
   - En este ejercicio, desarrollarás un script que incluye una función. Esta función debe aceptar un callback y trabajar con una promesa. El objetivo es que el callback se ejecute solo después de que la promesa se haya resuelto, permitiendo entender la relación y el flujo entre operaciones síncronas y asíncronas.
 
@@ -190,7 +190,7 @@ Este ejercicio te permitirá desarrollar un script que demuestra cómo los closu
 
     Nota\* Si deseas llevar este ejercicio un paso más allá, modifica la función para que también maneje el rechazo de la promesa. En este caso, el callback debería recibir información sobre si la promesa fue resuelta o rechazada, y mostrar un mensaje adecuado en la consola.
 
-- Ejercicio 6: Event Loop y Web APIs
+#### Ejercicio 6: Event Loop y Web APIs
 
   - En este ejercicio, escribirás un script que utiliza setTimeout() para organizar la ejecución de código en tiempos específicos. Observarás el orden en el que los mensajes se muestran en la consola y reflexionarás sobre el papel del event loop y cómo JavaScript gestiona las operaciones de entrada/salida y las tareas asíncronas.
 
@@ -201,7 +201,7 @@ Este ejercicio te permitirá desarrollar un script que demuestra cómo los closu
 
   **Reflexión y Análisis:** - ¿Por qué "Mensaje 2: Con timeout de 0 segundos" no se muestra inmediatamente después de "Mensaje 1: Inmediatamente", a pesar de tener un retardo de 0 segundos? - ¿Que nos dicen este comportamiento sobre el event loop, las macro y micro tareas, y la forma en que JavaScript maneja las operaciones asíncronas?
 
-- Ejercicio 7: Considera el siguiente script:
+#### Ejercicio 7: Considera el siguiente script:
 
 ```javascript
 console.log("Inicio del script");
@@ -245,7 +245,7 @@ console.log("Fin del script");
 - Usa fetch para cargar datos de la siguiente URL: https://jsonplaceholder.typicode.com/posts
 - Muestra los datos en consola y maneja cualquier error que pueda ocurrir en el bloque catch de la promesa.
 
-### Seccion 4: Entendiendo el Event Loop
+### Seccion 4: Entendiendo el Event Loop a profundidad
 
 **Objetivo:** Comprender el funcionamiento del event loop y las Web APIs en JavaScript con una herramienta de visualización.
 
