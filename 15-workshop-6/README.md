@@ -424,3 +424,14 @@ function crearReserva(numeroHabitacion, fechaInicio, fechaFin, huesped) {
   - **Edición de Reserva:** Permitir al usuario cambiar la fecha de inicio y fin de la reserva.
 
   - **Solucion Propuesta\***: Implementar una función editarReserva() que busque la reserva por ID y permita al usuario cambiar las fechas de inicio y fin. Actualizar la reserva en el array de reservas con los nuevos detalles.
+
+```javascript
+function constructora(name){
+  this.name = name;
+
+  this.myMethod = function(){
+    console.log(this.name);
+  }
+}
+
+```
