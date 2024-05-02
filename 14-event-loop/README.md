@@ -56,6 +56,10 @@ Nota* Cada then() encola un nuevo callback en la microtask queue, que se ejecuta
 
 En terminos de importancia, las microtareas tienen prioridad sobre las macrotareas. Esto significa que las microtareas se ejecutan antes que las macrotareas, incluso si se han encolado después. Por lo tanto, es importante tener en cuenta el orden de ejecución de las tareas asíncronas en JavaScript para evitar errores y comportamientos inesperados.
 
+## Recursos Adicionales
+- [JavaScript Visualized - Event Loop, Web APIs, (Micro)task Queue](https://www.youtube.com/watch?v=eiC58R16hb8) by Lydia Hallie.
+-  [La Guía Definitiva del Event Loop en JS (async, promises, callbacks, render)](https://www.youtube.com/watch?v=dX2lThXc0p4) by @4tomik (@antoniosarosi)
+
 ## Glosario
 
 Web APIs: DOM, AJAX, setTimeout, setInterval, fetch, requestAnimationFrame.
