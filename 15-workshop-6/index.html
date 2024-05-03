@@ -19,7 +19,6 @@
                     // Realiza la solicitud fetch dentro del setTimeout
                     fetch("data.json")
                         .then((response) => {
-                            console.log(response);
                             if (!response.ok) {
                                 throw new Error("Error al cargar los datos.");
                             }
@@ -46,8 +45,9 @@
                     "Ingrese el numero de habitacion a reservar: " +
                     rooms
                         .map((room) => {
-                            return `\nRoom Number: ${room.number} (${roomTypes.find((type) => type.id === room.roomTypeId).name
-                                })`;
+                            return room.availability && `\nRoom Number: ${room.number} (${roomTypes.find((type) => type.id === room.roomTypeId).name
+                                })`
+
                         })
                         .join(", ")
                 );

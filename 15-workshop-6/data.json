@@ -36,13 +36,13 @@
       "number": 101,
       "roomTypeId": 1,
       "priceNight": 50,
-      "availability": true
+      "availability": false
     },
     {
       "number": 102,
       "roomTypeId": 2,
       "priceNight": 80,
-      "availability": true
+      "availability": false
     },
     {
       "number": 103,

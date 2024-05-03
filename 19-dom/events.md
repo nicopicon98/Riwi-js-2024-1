@@ -1,0 +1,57 @@
+# Eventos en Javascript
+
+- `click`: Se dispara cuando se hace clic en un elemento.
+- `mouseover`: Se dispara cuando el puntero del ratón se mueve sobre un elemento.
+- `mouseout`: Se dispara cuando el puntero del ratón sale de un elemento.
+- `change`: Se dispara cuando el valor de un elemento cambia (por ejemplo, un campo de entrada <input />).
+- `submit`: Se dispara cuando se envía un formulario.
+- `keydown`: Se dispara cuando se presiona una tecla.
+- `load`: Se dispara cuando se carga un elemento (por ejemplo, una imagen o un script).
+- `DOMContentLoaded`: Se dispara cuando se ha cargado el contenido HTML de la página.
+- `resize`: Se dispara cuando se cambia el tamaño de la ventana del navegador.
+- `scroll`: Se dispara cuando se desplaza la página.
+- `focus`: Se dispara cuando un elemento obtiene el foco.
+- `blur`: Se dispara cuando un elemento pierde el foco.
+- `input`: Se dispara cuando se introduce texto en un campo de entrada.
+- `error`: Se dispara cuando se produce un error (por ejemplo, al cargar una imagen o un script).
+- `offline`: Se dispara cuando el navegador se desconecta de Internet.
+- `online`: Se dispara cuando el navegador se conecta a Internet.
+- `popstate`: Se dispara cuando se cambia el historial de navegación.
+- `hashchange`: Se dispara cuando cambia el hash de la URL.
+- `beforeunload`: Se dispara antes de que el usuario abandone la página.
+- `unload`: Se dispara cuando el usuario abandona la página.
+- `contextmenu`: Se dispara cuando se hace clic con el botón derecho del ratón.
+- `dblclick`: Se dispara cuando se hace doble clic en un elemento.
+- `drag`: Se dispara cuando se arrastra un elemento.
+- `dragstart`: Se dispara cuando se inicia el arrastre de un elemento.
+- `dragend`: Se dispara cuando se finaliza el arrastre de un elemento.
+- `dragenter`: Se dispara cuando un elemento se arrastra sobre otro elemento.
+- `dragleave`: Se dispara cuando un elemento se arrastra fuera de otro elemento.
+- `dragover`: Se dispara cuando un elemento se arrastra sobre otro elemento.
+- `drop`: Se dispara cuando se suelta un elemento arrastrado.
+- `touchstart`: Se dispara cuando se toca la pantalla.
+- `touchmove`: Se dispara cuando se mueve el dedo sobre la pantalla.
+- `touchend`: Se dispara cuando se levanta el dedo de la pantalla.
+- `touchcancel`: Se dispara cuando se cancela el evento táctil.
+- `animationstart`: Se dispara cuando se inicia una animación.
+- `animationend`: Se dispara cuando finaliza una animación.
+- `animationiteration`: Se dispara cuando se repite una animación.
+- `transitionend`: Se dispara cuando finaliza una transición.
+- `pointerdown`: Se dispara cuando se presiona un botón del ratón o se toca la pantalla.
+- `pointerup`: Se dispara cuando se suelta un botón del ratón o se levanta el dedo de la pantalla.
+- `pointermove`: Se dispara cuando se mueve el ratón o el dedo sobre la pantalla.
+- `pointerover`: Se dispara cuando el ratón o el dedo se mueve sobre un elemento.
+- `pointerout`: Se dispara cuando el ratón o el dedo se mueve fuera de un elemento.
+- `pointerenter`: Se dispara cuando el ratón o el dedo entra en un elemento.
+- `pointerleave`: Se dispara cuando el ratón o el dedo sale de un elemento.
+- `gotpointercapture`: Se dispara cuando un elemento captura un puntero.
+- `lostpointercapture`: Se dispara cuando un elemento pierde la captura de un puntero.
+- `pointercancel`: Se dispara cuando se cancela un evento de puntero.
+- `select`: Se dispara cuando se selecciona texto en un elemento.
+- `wheel`: Se dispara cuando se mueve la rueda del ratón.
+- `message`: Se dispara cuando se recibe un mensaje (por ejemplo, de un iframe).
+- `storage`: Se dispara cuando se modifica el almacenamiento local.
+- `beforeprint`: Se dispara antes de imprimir la página.
+- `afterprint`: Se dispara después de imprimir la página.
+- `pagehide`: Se dispara cuando se oculta la página.
+- `pageshow`: Se dispara cuando se muestra la página.

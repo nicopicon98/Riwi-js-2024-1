@@ -6,29 +6,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #hidden-box {
+        #box {
             display: flex;
             opacity: 1;
-            height: 100vh;
-            justify-content: center;
             align-items: center;
             font-size: 3.6rem;
             transition: all 1s;
+            padding: 15px;
+            padding-top: 0;
+        }
+
+        div.container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
     </style>
 </head>
 
 <body>
-    <div id="hidden-box">
+    <div class="container">
+        <img src="https://riwi.io/wp-content/uploads/2023/07/Fondo-claro-logo.png" alt="logo" style="width: 500px">
+        <div id="box">
 
+        </div>
     </div>
 
-    <!-- <script src="01-introduccion/app.js"></script> -->
-    <!-- <script src="02-variables/app.js"></script> -->
-    <!-- <script src="03-data-types/app.js"></script> -->
-    <!-- <script src="04-truthy-falsey/app.js"></script> -->
-    <!-- <script src="05-operators/app.js"></script> -->
-    <script src="app.js" type="module"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const box = document.getElementById("box");
+            const boxH1 = document.createElement("p");
+            boxH1.style.color = "#6B5CFF";
+            boxH1.style.fontSize = "4.8rem";
+            boxH1.style.fontFamily = "Arial";
+            boxH1.style.margin = "0";
+            box.appendChild(boxH1);
+
+            const text = "Welcome to the JavaScript world!";
+            let index = 0;
+            let reverse = false;
+
+            function typeWriter() {
+                if (!reverse) {
+                    if (index < text.length) {
+                        if (text.charAt(index) === " ") {
+                            boxH1.innerHTML += text.charAt(index);
+                            index++;
+                            typeWriter();
+                            return;
+                        }
+                        boxH1.innerHTML += text.charAt(index);
+                        index++;
+                    } else {
+                        reverse = true;
+                    }
+                } else {
+                    if (index > 0) {
+                        boxH1.innerHTML = boxH1.innerHTML.slice(0, -1);
+                        index--;
+                    } else {
+                        reverse = false;
+                    }
+                }
+                setTimeout(typeWriter, 300);
+            }
+
+            typeWriter();
+        });
+    </script>
+    </script>
 </body>
 
 </html>

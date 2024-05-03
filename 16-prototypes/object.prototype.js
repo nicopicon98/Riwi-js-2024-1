@@ -57,3 +57,7 @@ Object.defineProperty(persona, 'pais', {
 });
 
 console.log(persona.propertyIsEnumerable('pais')); // false
+
+// Object.prototype.toSource()
+
+console.log(persona.toSource()); // ({ nombre: 'Pedro', apellido: 'Gomez', edad: 30, pais: 'Colombia' })
