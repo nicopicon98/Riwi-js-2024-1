@@ -50,7 +50,7 @@ En este taller, abordaremos Abstracción, Herencia y Polimorfismo.
 
 ## Procedimiento Teorico
 
-### Familizarindonos con diagramas de clase
+### Familiarizandonos con diagramas de clase
 
 - Visitar el siguiente link [Ejemplo clases](https://link.excalidraw.com/l/7017w2AeI6S/7voKzrjowHX)
 - Pones tu nombre como invitado, por ejemplo, "Daniel Daza".
