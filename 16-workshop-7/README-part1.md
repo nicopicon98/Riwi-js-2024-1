@@ -215,7 +215,7 @@ En esta sección, diseñaran dos sistemas usando los tres principios de la Progr
         - Revisa cada clase y método para asegurarte de que cumplen su propósito sin exponer demasiados detalles innecesarios (abstracción).
         - Aprovecha la herencia para evitar la duplicación de código.
         - Implementa polimorfismo donde sea práctico para permitir que métodos con el mismo nombre realicen acciones distintas basadas en la clase que los invoca. Por ejemplo, el metodo actualizarEstado de disponible a no disponible del repartidor, tiene una diferente implementacion del mismo metodo pero en Pedido, el cual actualizaria el estado del pedido.
-    - Comprimir todo en un archivo con el formato primerNombre-primerApellido-Ultimos3DigitosCedula.zip y subirlo a la plataforma en la semana 3 del modulo de Javascript.
+    - Comprimir todo en un archivo con el formato primerNombre-primerApellido-Ultimos3DigitosCedula.zip y subirlo a la plataforma en la semana 4 del modulo de Javascript.
 
 
 
