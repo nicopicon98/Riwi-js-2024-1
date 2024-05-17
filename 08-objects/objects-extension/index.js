@@ -17,12 +17,12 @@
 // const newarr = Object.isSealed(medidasCama); // check if the object is sealed, own property configurable is false
 // console.log(newarr);
 
-// Object.defineProperty(medidasCama, "ancho", {
-//     value: 1.5, // default value
-//     configurable: false, // can be deleted
-//     enumerable: true, // can be iterated
-//     writable: true, // can't be changed
-// });
+Object.defineProperty(medidasCama, "ancho", {
+    value: 1.5, // default value
+    configurable: false, // can be deleted
+    enumerable: true, // can be iterated
+    writable: true, // can't be changed
+});
 
 // console.log(medidasCama);
 // //delete medidasCama.ancho; // since configurable is true, this will delete the property

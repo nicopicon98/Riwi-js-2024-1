@@ -1,0 +1,16 @@
+{
+  // Este es un comentario de una sola línea
+  users: [
+    { id: 1, name: "John Doe", roleId: 1 }, // Comentario en línea
+    { id: 2, name: "Jane Smith", roleId: 2 },
+    { id: 3, name: "Alice Johnson", roleId: 1 },
+    { id: 4, name: "Bob Brown", roleId: 3 },
+  ],
+  roles: [
+    { id: 1, name: "Admin" },
+    { id: 2, name: "Editor" },
+    { id: 3, name: "Viewer" },
+  ],
+  /* Este es un comentario
+     de varias líneas */
+}

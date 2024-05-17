@@ -1,3 +1,4 @@
+console.log('Hi')
 /**
  * Prototypes en JavaScript
  */
@@ -17,6 +18,19 @@
 
 // Función constructora
 
+/*
+function UsuarioBase(nombre, email) {
+    function saluda() {
+        console.log(`Hola, mi nombre es ${nombre}`);
+    }
+    return {
+        nombre: nombre,
+        email: email,
+        saludar
+    }
+}
+ */
+
 function UsuarioBase(nombre, apellido) {
     this.nombre = nombre;
     this.apellido = apellido;
@@ -27,15 +41,17 @@ UsuarioBase.prototype.saludar = function() {
 }
 
 const usuarioBase = new UsuarioBase('Juan', 'Perez'); // new asigna this a usuarioBase
+const usuarioBase2 = new UsuarioBase('Nico', 'Guzman'); // new asigna this a usuarioBase
+
 
 /*
-    2.2 Object.create vs Object.setPrototypeOf // No recomendado
-        - Object.create crea un nuevo objeto con el prototipo que se le pasa como argumento.
-        - Suponiendo Administrador como funcion constructora, 
-        podemos heredar de UsuarioBase de la siguiente manera: Administrador.prototype = Object.create(UsuarioBase.prototype)
-        - Object.setPrototypeOf es una función que establece el prototipo de un objeto. No esta
-        recomendado usarla ya que es menos eficiente que Object.create y no es soportada por todos los navegadores.
-        Como asi que es menos eficiente que Object.create?
+2.2 Object.create vs Object.setPrototypeOf // No recomendado
+- Object.create crea un nuevo objeto con el prototipo que se le pasa como argumento.
+- Suponiendo Administrador como funcion constructora, 
+podemos heredar de UsuarioBase de la siguiente manera: Administrador.prototype = Object.create(UsuarioBase.prototype)
+- Object.setPrototypeOf es una función que establece el prototipo de un objeto. No esta
+recomendado usarla ya que es menos eficiente que Object.create y no es soportada por todos los navegadores.
+Como asi que es menos eficiente que Object.create?
 */
 
 // Object.create
@@ -43,16 +59,23 @@ const usuarioBase = new UsuarioBase('Juan', 'Perez'); // new asigna this a usuar
 function Administrador(nombre, apellido, cargo) {
     UsuarioBase.call(this, nombre, apellido);
     this.cargo = cargo;
+    this.saludar = function() {}
 }
 
 Administrador.prototype = Object.create(UsuarioBase.prototype);
 
+// const administrador = new Administrador('Pedro', 'Gomez', 'Administrador');
+
+Administrador.prototype.saludar = function() {
+    return 
+}
+
 // Checkear si el prototipo de Administrador es UsuarioBase
 
 // Formas:
-    console.log(Administrador.prototype instanceof UsuarioBase); // instanceof
-    console.log(UsuarioBase.prototype.isPrototypeOf(Administrador.prototype)); // isPrototypeOf
-    console.log(Object.getPrototypeOf(Administrador.prototype) === UsuarioBase.prototype); // Object.getPrototypeOf
+console.log(Administrador.prototype instanceof UsuarioBase); // instanceof
+console.log(UsuarioBase.prototype.isPrototypeOf(Administrador.prototype)); // isPrototypeOf
+console.log(Object.getPrototypeOf(Administrador.prototype) === UsuarioBase.prototype); // Object.getPrototypeOf
 
 
 Administrador.prototype.saludar = function() {
@@ -68,7 +91,7 @@ function Administrador2(nombre, apellido, cargo) {
     this.cargo = cargo;
 }
 
-Administrador2.prototype = Object.setPrototypeOf(UsuarioBase.prototype);
+Object.setPrototypeOf(Administrador2.prototype, UsuarioBase.prototype);
 
 Administrador2.prototype.saludar = function() {
     console.log(`Hola, mi nombre es ${this.nombre} ${this.apellido} y soy ${this.cargo}`);
@@ -104,14 +127,14 @@ Perro.prototype = new Animal();
 
 const perro = new Perro();
 perro.ladrar(); // Guau
-perro.comer(); // Hacer ruido
+perro.comer(); // Comiendo
 
 // HasOwnProperty: método que determina si un objeto tiene una propiedad con el nombre especificado como una propiedad directa del objeto.
 console.log(perro.hasOwnProperty('ladrar')); // true
 console.log(perro.hasOwnProperty('comer')); // false
 
 // Si se intenta acceder a una propiedad o método que no existe en la cadena de prototipos, se retorna undefined.
-perrro.dormir(); // undefined
+// perro.dormir(); // undefined
 
 /*
 4. Shadowing u ocultamiento de propiedades
@@ -131,7 +154,7 @@ function Animal2() {
 
 function Perro2() {
     this.hacerRuido = function() {
-        console.log('Guau');
+        console.log('Guau', 'En Perro2');
     }
 }
 
@@ -163,7 +186,15 @@ function Perro3() {
     }
 }
 
+
+function Gato() {
+    this.ladrar = function() {
+        console.log('Guau');
+    }
+}
+
 Perro3.prototype = new Animal3();
+Gato.prototype = new Animal3();
 
 const perro3 = new Perro3();
 

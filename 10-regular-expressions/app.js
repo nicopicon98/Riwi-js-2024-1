@@ -41,3 +41,8 @@ console.log(onlyLowerCaseLetters.test("A")); // false, "A" es mayúscula
 console.log(onlyLowerUpperCaseLetters.test("1")); // false, "1" no es letra
 console.log(onlyNumbers.test("123")); // true, solo números
 console.log(emailSimple.test("user@example.com")); // true,
+
+
+// Recursos adicionales
+
+// https://regex-vis.com/

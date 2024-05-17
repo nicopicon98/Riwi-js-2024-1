@@ -1,0 +1,71 @@
+{
+  "posts": [
+    {
+      "id": 2,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 3,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "title": "json-server-updated-1",
+      "author": "typicode-updated-2",
+      "id": 4
+    },
+    {
+      "id": 1,
+      "title": "json-server-updated-1",
+      "author": "typicode-updated-2"
+    },
+    {
+      "title": "json-server-updated-1",
+      "author": "typicode-updated-2",
+      "id": 6
+    },
+    {
+      "title": "json-server-updated-1",
+      "author": "typicode-updated-2",
+      "id": 7
+    },
+    {
+      "title": "json-server-updated-1",
+      "author": "typicode-updated-2",
+      "id": 8
+    },
+    {
+      "title": "json-server-updated-1",
+      "author": "typicode-updated-2",
+      "id": 9
+    },
+    {
+      "title": "json-server-updated-1",
+      "author": "typicode-updated-2",
+      "id": 10
+    }
+  ],
+  "comments": [
+    {
+      "id": 4,
+      "body": "some comment",
+      "postId": 2
+    },
+    {
+      "id": 5,
+      "body": "some comment",
+      "postId": 2
+    },
+    {
+      "id": 6,
+      "body": "some comment",
+      "postId": 2
+    }
+  ],
+  "profile": {
+    "name": "typicode",
+    "age": 3,
+    "city": "Paris"
+  }
+}

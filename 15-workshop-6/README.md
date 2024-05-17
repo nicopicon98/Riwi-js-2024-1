@@ -8,11 +8,11 @@ Este taller está diseñado para aplicar y profundizar en los conceptos avanzado
 2. [Objetivos](#Objetivos)
 3. [Instrucciones](#Instrucciones)
 4. [Descripción](#Descripción)
-    - [Sección 1: Scope y Hoisting](#Sección-1-Scope-y-Hoisting)
-    - [Sección 2: Funciones, Closures y Asincronía](#Sección-2-Funciones-Closures-y-Asincronía)
-    - [Sección 3: Closures, Promesas y Web APIs](#Sección-3-Closures-Promesas-y-Web-APIs)
-    - [Sección 4: Entendiendo el Event Loop](#Sección-4-Entendiendo-el-Event-Loop)
-    - [Sección 5: Aplicando Todos los Conceptos - Proyecto de Sistema de Reservas de Hotel](#Sección-5-Aplicando-Todos-los-Conceptos---Proyecto-de-Sistema-de-Reservas-de-Hotel)
+   - [Sección 1: Scope y Hoisting](#Sección-1-Scope-y-Hoisting)
+   - [Sección 2: Funciones, Closures y Asincronía](#Sección-2-Funciones-Closures-y-Asincronía)
+   - [Sección 3: Closures, Promesas y Web APIs](#Sección-3-Closures-Promesas-y-Web-APIs)
+   - [Sección 4: Entendiendo el Event Loop](#Sección-4-Entendiendo-el-Event-Loop)
+   - [Sección 5: Aplicando Todos los Conceptos - Proyecto de Sistema de Reservas de Hotel](#Sección-5-Aplicando-Todos-los-Conceptos---Proyecto-de-Sistema-de-Reservas-de-Hotel)
 
 ## Requisitos
 
@@ -39,65 +39,65 @@ Este taller está diseñado para aplicar y profundizar en los conceptos avanzado
 
 #### Ejercicio 1: El quiz del Scope.
 
-  - Considera el siguiente condigo:
+- Considera el siguiente condigo:
 
-    ```javascript
-    // Global Scope
-    var globalVariable = "Soy una variable global.";
+  ```javascript
+  // Global Scope
+  var globalVariable = "Soy una variable global.";
 
-    function testScope() {
-      // Function Scope
-      var functionVariable = "Soy una variable local.";
+  function testScope() {
+    // Function Scope
+    var functionVariable = "Soy una variable local.";
 
-      if (true) {
-        // Block Scope
-        let blockVariable = "Soy una variable de bloque.";
-        console.log("Dentro del bloque:", blockVariable);
-      }
-
-      console.log("Dentro de la función:", functionVariable);
+    if (true) {
+      // Block Scope
+      let blockVariable = "Soy una variable de bloque.";
+      console.log("Dentro del bloque:", blockVariable);
     }
 
-    console.log("Fuera de la función:", globalVariable);
-    testScope();
-    ```
+    console.log("Dentro de la función:", functionVariable);
+  }
 
-  - **Interacción del Usuario:** El script solicitará, a través de un prompt, que el usuario adivine si es posible acceder a cada una de las variables (globalVariable, functionVariable, blockVariable) en diferentes partes del código.
+  console.log("Fuera de la función:", globalVariable);
+  testScope();
+  ```
 
-  - **Respuesta del Usuario:** Deberás ingresar tus respuestas en el prompt() indicando si crees que el acceso a cada variable es posible y por qué.
+- **Interacción del Usuario:** El script solicitará, a través de un prompt, que el usuario adivine si es posible acceder a cada una de las variables (globalVariable, functionVariable, blockVariable) en diferentes partes del código.
 
-  - **Validación de Respuestas:** Después de ingresar tus respuestas, el script evaluará y mostrará si cada una de ellas es correcta o incorrecta, y proporcionará una explicación detallada de los resultados.
+- **Respuesta del Usuario:** Deberás ingresar tus respuestas en el prompt() indicando si crees que el acceso a cada variable es posible y por qué.
+
+- **Validación de Respuestas:** Después de ingresar tus respuestas, el script evaluará y mostrará si cada una de ellas es correcta o incorrecta, y proporcionará una explicación detallada de los resultados.
 
 #### Ejercicio 2: Hoisting en Práctica
 
-  - Copia y pega el siguiente código en un archivo de JavaScript o en la consola de tu navegador:
+- Copia y pega el siguiente código en un archivo de JavaScript o en la consola de tu navegador:
 
-    ```javascript
-    // vars call
-    console.log("Valor de a:", a);
-    console.log("Valor de b:", b);
-    console.log("Valor de c:", c);
+  ```javascript
+  // vars call
+  console.log("Valor de a:", a);
+  console.log("Valor de b:", b);
+  console.log("Valor de c:", c);
 
-    // functions call
-    console.log("Resultado de funcionDeclarada:", funcionDeclarada());
-    console.log("Resultado de funcionExpresada:", funcionExpresada());
+  // functions call
+  console.log("Resultado de funcionDeclarada:", funcionDeclarada());
+  console.log("Resultado de funcionExpresada:", funcionExpresada());
 
-    // vars declaration
-    var a = 1;
-    let b = 2;
-    const c = 3;
+  // vars declaration
+  var a = 1;
+  let b = 2;
+  const c = 3;
 
-    // functions declarations
-    function funcionDeclarada() {
-      return "Función declarada ha sido llamada.";
-    }
+  // functions declarations
+  function funcionDeclarada() {
+    return "Función declarada ha sido llamada.";
+  }
 
-    const funcionExpresada = function () {
-      return "Función expresada ha sido llamada.";
-    };
-    ```
+  const funcionExpresada = function () {
+    return "Función expresada ha sido llamada.";
+  };
+  ```
 
-  - Pide al usuario predecir el resultado de cada operación y luego muestra el resultado real para explicar el comportamiento del hoisting. Recuerda que todas las variables y funciones son hoisted, pero con comportamientos diferentes. Por ejemplo, las variables declaradas con var son inicializadas con undefined, mientras que las variables con let y const no pueden ser accedidas antes de su declaración. Con respecto a las funciones, estas son inicializadas con su definición completa, por lo que pueden ser llamadas antes de su declaración.
+- Pide al usuario predecir el resultado de cada operación y luego muestra el resultado real para explicar el comportamiento del hoisting. Recuerda que todas las variables y funciones son hoisted, pero con comportamientos diferentes. Por ejemplo, las variables declaradas con var son inicializadas con undefined, mientras que las variables con let y const no pueden ser accedidas antes de su declaración. Con respecto a las funciones, estas son inicializadas con su definición completa, por lo que pueden ser llamadas antes de su declaración.
 
 ### Sección 2: Funciones, Closures y Asincronía
 
@@ -177,29 +177,29 @@ Este ejercicio te permitirá desarrollar un script que demuestra cómo los closu
 
 #### Ejercicio 5: Promesas y Callbacks en Acción
 
-  - En este ejercicio, desarrollarás un script que incluye una función. Esta función debe aceptar un callback y trabajar con una promesa. El objetivo es que el callback se ejecute solo después de que la promesa se haya resuelto, permitiendo entender la relación y el flujo entre operaciones síncronas y asíncronas.
+- En este ejercicio, desarrollarás un script que incluye una función. Esta función debe aceptar un callback y trabajar con una promesa. El objetivo es que el callback se ejecute solo después de que la promesa se haya resuelto, permitiendo entender la relación y el flujo entre operaciones síncronas y asíncronas.
 
-    - 5.1: Definir la función: Vamos a definir una función llamada manejarAsincronia. Esta función aceptará dos parámetros: un callback y una promesa. La función deberá asegurarse de que el callback solo se ejecute una vez que la promesa se haya resuelto.
-    - 5.2: Crear la Promesa: Dentro de la función, crearás una promesa que se resuelva automáticamente después de 2 segundos. Puedes usar setTimeout dentro del constructor de la promesa para lograr este comportamiento.
-    - 5.3: Ejecutar el Callback: Una vez que la promesa se resuelva, debes ejecutar el callback proporcionado. Este callback simplemente mostrará un mensaje en la consola, por ejemplo: "¡Promesa cumplida y callback ejecutado!".
-    - 5.4: Invocar la Función: Después de definir la función, deberás invocarla pasando un callback y la promesa que creaste. Observa cómo el callback solo se ejecuta después de que la promesa se resuelve.
-    - 5.5: Despues de invocar la funcion, responde las siguientes preguntas:
-      -¿Qué sucede si cambias el tiempo de resolución de la promesa a 5 segundos o a 1 segundo?
-      - ¿Cómo se comporta la función si la promesa es rechazada en lugar de resuelta?
-      - ¿Puedes modificar la función para que el callback maneje diferentes tipos de información dependiendo del resultado de la promesa?
+  - 5.1: Definir la función: Vamos a definir una función llamada manejarAsincronia. Esta función aceptará dos parámetros: un callback y una promesa. La función deberá asegurarse de que el callback solo se ejecute una vez que la promesa se haya resuelto.
+  - 5.2: Crear la Promesa: Dentro de la función, crearás una promesa que se resuelva automáticamente después de 2 segundos. Puedes usar setTimeout dentro del constructor de la promesa para lograr este comportamiento.
+  - 5.3: Ejecutar el Callback: Una vez que la promesa se resuelva, debes ejecutar el callback proporcionado. Este callback simplemente mostrará un mensaje en la consola, por ejemplo: "¡Promesa cumplida y callback ejecutado!".
+  - 5.4: Invocar la Función: Después de definir la función, deberás invocarla pasando un callback y la promesa que creaste. Observa cómo el callback solo se ejecuta después de que la promesa se resuelve.
+  - 5.5: Despues de invocar la funcion, responde las siguientes preguntas:
+    -¿Qué sucede si cambias el tiempo de resolución de la promesa a 5 segundos o a 1 segundo?
+    - ¿Cómo se comporta la función si la promesa es rechazada en lugar de resuelta?
+    - ¿Puedes modificar la función para que el callback maneje diferentes tipos de información dependiendo del resultado de la promesa?
 
-    Nota\* Si deseas llevar este ejercicio un paso más allá, modifica la función para que también maneje el rechazo de la promesa. En este caso, el callback debería recibir información sobre si la promesa fue resuelta o rechazada, y mostrar un mensaje adecuado en la consola.
+  Nota\* Si deseas llevar este ejercicio un paso más allá, modifica la función para que también maneje el rechazo de la promesa. En este caso, el callback debería recibir información sobre si la promesa fue resuelta o rechazada, y mostrar un mensaje adecuado en la consola.
 
 #### Ejercicio 6: Event Loop y Web APIs
 
-  - En este ejercicio, escribirás un script que utiliza setTimeout() para organizar la ejecución de código en tiempos específicos. Observarás el orden en el que los mensajes se muestran en la consola y reflexionarás sobre el papel del event loop y cómo JavaScript gestiona las operaciones de entrada/salida y las tareas asíncronas.
+- En este ejercicio, escribirás un script que utiliza setTimeout() para organizar la ejecución de código en tiempos específicos. Observarás el orden en el que los mensajes se muestran en la consola y reflexionarás sobre el papel del event loop y cómo JavaScript gestiona las operaciones de entrada/salida y las tareas asíncronas.
 
-  **Diseño del Experimento** - Vamos a diseñar un simple experimento para ver cómo el event loop maneja las tareas. - Necesitarás utilizar la función setTimeout() para planificar la ejecución de código.
+**Diseño del Experimento** - Vamos a diseñar un simple experimento para ver cómo el event loop maneja las tareas. - Necesitarás utilizar la función setTimeout() para planificar la ejecución de código.
 
-  **Implementación del Script:** - Inicia tu script mostrando un mensaje en consola que diga "Mensaje 1: Inmediatamente". - Luego, utiliza setTimeout() con un retardo de 0 segundos para mostrar "Mensaje 2: Con timeout de 0 segundos". - Finalmente, configura otro setTimeout() con un retardo de 1 segundo para mostrar "Mensaje 3: Con timeout de 1 segundo".
-  **Ejecución y Observación:** - Ejecuta el script en tu entorno de desarrollo o en la consola del navegador. - Observa el orden en el que aparecen los mensajes y toma nota.
+**Implementación del Script:** - Inicia tu script mostrando un mensaje en consola que diga "Mensaje 1: Inmediatamente". - Luego, utiliza setTimeout() con un retardo de 0 segundos para mostrar "Mensaje 2: Con timeout de 0 segundos". - Finalmente, configura otro setTimeout() con un retardo de 1 segundo para mostrar "Mensaje 3: Con timeout de 1 segundo".
+**Ejecución y Observación:** - Ejecuta el script en tu entorno de desarrollo o en la consola del navegador. - Observa el orden en el que aparecen los mensajes y toma nota.
 
-  **Reflexión y Análisis:** - ¿Por qué "Mensaje 2: Con timeout de 0 segundos" no se muestra inmediatamente después de "Mensaje 1: Inmediatamente", a pesar de tener un retardo de 0 segundos? - ¿Que nos dicen este comportamiento sobre el event loop, las macro y micro tareas, y la forma en que JavaScript maneja las operaciones asíncronas?
+**Reflexión y Análisis:** - ¿Por qué "Mensaje 2: Con timeout de 0 segundos" no se muestra inmediatamente después de "Mensaje 1: Inmediatamente", a pesar de tener un retardo de 0 segundos? - ¿Que nos dicen este comportamiento sobre el event loop, las macro y micro tareas, y la forma en que JavaScript maneja las operaciones asíncronas?
 
 #### Ejercicio 7: Considera el siguiente script:
 
@@ -308,6 +308,7 @@ console.log("Fin del script");
 #### Requisitos del Sistema
 
 - **Inicialización y Gestión de Datos:** Cargar data.json para almacenar y gestionar datos de habitaciones y reservas.
+
   - **Habitaciones:** Cada habitación debe tener un número único, un tipoHabitacionId , un precio por noche y una disponibilidad.
   - **Tipos de Habitaciones:** Cada tipo de habitación debe tener un tipoId, un nombre (individual, doble, suite) una descripción y una capacidad.
   - **Reservas:** Cada reserva debe tener un número único, el número de habitación reservada, la fecha de inicio y fin de la reserva, el nombre completo (nombre y apellido) del huésped en minúsculas y la cantidad de huéspedes.
@@ -351,17 +352,38 @@ function cargarYMostrarData() {
 cargarYMostrarData()
   .then(({ rooms, roomTypes }) => {
     // Mostrar el contenido de las habitaciones después de cargar los datos
-    const userInput = prompt(
-      "Ingrese el numero de habitacion a reservar: " +
-        rooms
-          .map((room) => {
-            return `\nRoom Number: ${room.number} (${
-              roomTypes.find((type) => type.id === room.type).name
-            })`;
-          })
-          .join(", ")
-    );
+
     // ... Continuar con la lógica de la app
+    while (true) {
+      const userInput = prompt(
+        "Ingresa la opcion que deseas 1. Reservar 2. Ver Reservas 3. Cancelar Reserva 4. Salir"
+      );
+      switch (userInput) {
+        case "1":
+          const userInput2 = prompt(
+            "Ingrese el numero de habitacion a reservar: " +
+              rooms
+                .map((room) => {
+                  return `\nRoom Number: ${room.number} (${
+                    roomTypes.find((type) => type.id === room.roomTypeId).name
+                  })`;
+                })
+                .join(", ")
+          );
+          break;
+        case "2":
+          // Lógica para ver reservas actuales
+          break;
+        case "3":
+          // Lógica para cancelar reservas
+          break;
+        case "4":
+          // Salir del programa
+          return;
+        default:
+          console.log("Opción inválida. Inténtalo de nuevo.");
+      }
+    }
   })
   .catch((error) => {
     console.error("Error al manejar la promesa:", error);
@@ -371,6 +393,7 @@ cargarYMostrarData()
 Tener en cuenta que el script anterior es solo un ejemplo y deberá ser adaptado y extendido para cumplir con los requisitos del sistema de reserva, te preguntaras, ¿Por qué se utiliza una función para cargar y mostrar los datos en lugar de hacerlo directamente en el script? La respuesta es que la carga de datos es una operación asíncrona y fetch devuelve una promesa, por lo que es necesario manejar la promesa y los datos cargados en una función separada. En este caso setTimeout() se utiliza para simular una operación asíncrona y mostrar cómo se manejan las promesas en un entorno asíncrono. Además, se utiliza destructuring para extraer las propiedades rooms y roomTypes de los datos cargados desde los parametros de la promesa.
 
 - **Registro de Reservas:** Permitir a los usuarios reservar habitaciones.
+
   - **Verificación de Disponibilidad:** Cuando un usuario desee reservar una habitación, el sistema primero preguntará cuántas personas se alojarán. Luego, mostrará las habitaciones disponibles que satisfagan tanto la capacidad requerida como la disponibilidad.
   - **Reserva Exitosa:** Una vez que el usuario elija una habitación, el sistema registrará la reserva y mostrará un mensaje de confirmación.
 
@@ -400,18 +423,21 @@ function crearReserva(numeroHabitacion, fechaInicio, fechaFin, huesped) {
 ```
 
 - **Validacion de Disponibilidad:** Verificar la disponibilidad de una habitación antes de confirmar la reserva.
+
   - **Verificación de Capacidad:** Asegurarse de que la habitación tenga suficiente capacidad para el número de personas que se alojarán.
   - **Verificacion de disponibilidad:** Comprobar si la habitación está disponible.
 
   - **Solucion Propuesta\***: Simular una operación asíncrona con setTimeout() y promesas para replicar la verificación de disponibilidad, resolviendo la promesa si la habitación está disponible y rechazándola si no.
 
 - **Ver Reservas Actuales:** Permitir a los usuarios ver sus reservas actuales.
+
   - **Filtrado de Reservas:** Mostrar solo las reservas que coincidan con el nombre completo del huésped.
   - **Visualización de Detalles:** Mostrar detalles de cada reserva, incluido el número de habitación, tipo de habitacion, la fecha de inicio y fin, y el estado de la reserva.
 
   - **Solucion Propuesta\***: Implementar una función verReservas() que acepte el nombre completo del huésped y filtre las reservas que coincidan con el nombre. Mostrar los detalles de cada reserva utilizando un bucle for o forEach().
 
 - **Cancelar Reservas:** Permitir a los usuarios cancelar sus reservas actuales.
+
   - **Visualización de Reservas:** Mostrar las reservas actuales del usuario antes de cancelar.
   - **Identificación de Reserva:** Solicitar al usuario el número de reserva que desea cancelar.
   - **Confirmación de Cancelación:** Mostrar un mensaje de confirmación después de cancelar la reserva.
@@ -419,6 +445,7 @@ function crearReserva(numeroHabitacion, fechaInicio, fechaFin, huesped) {
   - **Solucion Propuesta\***: Implementar una función cancelarReserva() que busque la reserva por ID y la elimine del array de reservas utilizando splice() o un método similar. Mostrar un mensaje de confirmación después de la cancelación.
 
 - **Editar Reservas:** Permitir a los usuarios editar sus reservas actuales.
+
   - **Visualización de Reservas:** Mostrar las reservas actuales del usuario antes de editar.
   - **Identificación de Reserva:** Solicitar al usuario el número de reserva que desea editar.
   - **Edición de Reserva:** Permitir al usuario cambiar la fecha de inicio y fin de la reserva.
@@ -426,12 +453,11 @@ function crearReserva(numeroHabitacion, fechaInicio, fechaFin, huesped) {
   - **Solucion Propuesta\***: Implementar una función editarReserva() que busque la reserva por ID y permita al usuario cambiar las fechas de inicio y fin. Actualizar la reserva en el array de reservas con los nuevos detalles.
 
 ```javascript
-function constructora(name){
+function constructora(name) {
   this.name = name;
 
-  this.myMethod = function(){
+  this.myMethod = function () {
     console.log(this.name);
-  }
+  };
 }
-
 ```

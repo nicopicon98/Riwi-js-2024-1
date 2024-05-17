@@ -58,10 +58,15 @@ Es importante mencionar que hasOwnProperty() es útil cuando se itera sobre las 
 
 //isPrototypeOf()
 /*El método isPrototypeOf() en JavaScript es utilizado para verificar si un objeto existe en la cadena de prototipos de otro objeto. Este método devuelve true si el objeto especificado está en la cadena de prototipos del objeto desde el que se llamó este método, y false en caso contrario.*/
-function Fruta() {
+class Fruta {
+  constructor(nombre, precio) {
+    this.nombre = nombre;
+    this.precio = precio;
+  }
 }
 
-let manzana = new Fruta();
+let manzana = new Fruta("manzana", "2.50");
+let pera = new Fruta();
 
 console.log(Fruta.prototype.isPrototypeOf(manzana));  // Devuelve: true
 console.log(Object.prototype.isPrototypeOf(manzana)); // Devuelve: true
