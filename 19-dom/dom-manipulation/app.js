@@ -55,9 +55,9 @@ console.log(container.textContent); // ""
 container.textContent = '<div>hello world</div>'
 console.log(container.textContent); // "<div>hello world</div>"
 
-console.log("container innerhtml:", container.innerHTML); // container innerhtml: &lt;div&gt;hello world&lt;/div&gt;
+console.log("container innerHTML:", container.innerHTML); // container innerhtml: &lt;div&gt;hello world&lt;/div&gt;
 container.innerHTML = '<div>hello world</div>'
-console.log(container.innerHTML); // "<div>hello world</div>"
+console.log("container innerHTML", container.innerHTML); // "<div>hello world</div>"
 
 container.outerHTML = '<div>hello world</div>'; // <div>hello world</div>
-console.log(container.outerHTML); // <div>hello world</div>
+console.log("container outerHTML", container.outerHTML); // <div>hello world</div>
