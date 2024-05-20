@@ -28,7 +28,8 @@ JSON es un formato de texto que es completamente independiente del lenguaje pero
 
 ## ¿Qué es JSON5?
 
-JSON5 es una extensión de JSON que agrega algunas características adicionales a JSON. JSON5 es una extensión de JSON que agrega algunas características adicionales a JSON. JSON5 es una extensión de JSON que agrega algunas características adicionales a JSON. JSON5 es una extensión de JSON que agrega algunas características adicionales a JSON. JSON5 es una extensión de JSON que agrega algunas características adicionales a JSON.
+JSON5 es una extensión de JSON que agrega algunas características adicionales a JSON. 
+Basicamente se puede entender como una versión mejorada de JSON.
 
 ## Ejemplo de JSON5
 
