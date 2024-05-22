@@ -20,10 +20,10 @@
 
 /*/ Tipos especificos /*/
 
-const div = document.createElement('div'),
-    span = document.createElement('span'),
-    img = document.createElement('img'),
-    audio = document.createElement('audio');
+// const div = document.createElement('div'),
+//     span = document.createElement('span'),
+//     img = document.createElement('img'),
+//     audio = document.createElement('audio');
 
 //console.log(typeof div, "-", Object.getPrototypeOf(div)); // object, HTMLDivElement
 //console.log(typeof span, "-", Object.getPrototypeOf(span)); // object, HTMLDivElement
@@ -47,12 +47,12 @@ const div = document.createElement('div'),
 
 /* getElementsByName */
 
-const myTag = document.getElementsByName('first-card');
+// const myTag = document.getElementsByName('first-card');
 //console.log(myTag); // Devuelve un NodeList con todos los elementos que tengan el atributo name con el valor 'first-card', si no hay ninguno, devuelve un NodeList vacío
 
 /* getElementsByTagName */
 
-const myTag2 = document.getElementsByTagName('div');
+// const myTag2 = document.getElementsByTagName('div');
 //console.log(myTag2); // Devuelve un HTMLCollection con todos los elementos que sean de tipo 'div', si no hay ninguno, devuelve un HTMLCollection vacío
 
 /* querySelector y querySelectorAll */
@@ -140,6 +140,10 @@ const myTag2 = document.getElementsByTagName('div');
 // Para optimizar el rendimiento, es recomendable usar fragmentos del DOM (DocumentFragment) cuando necesitemos
 // agregar múltiples nodos al DOM simultáneamente.
 
-const myCustomElement = document.createTextNode('This is a comment');
-document.body.appendChild(myCustomElement);
+// const myCustomElement = document.createTextNode('This is a comment');
+// document.body.appendChild(myCustomElement);
 
+const $myDiv = document.createElement('DIV');
+document.body.appendChild($myDiv);
+$myDiv.innerHTML = '<p>Hello, World!</p>';
+console.log($myDiv.isConnected);

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="form-name">
+        <input name="generic-name" type="text" class="generic-class"/>
+        <input name="generic-name" type="text" class="generic-class"/>
+        <input name="generic-name" type="text" class="generic-class"/>
+        <input name="generic-name" type="text" class="generic-class"/>
+    </form>
+    <script>
+        const $newInput = document.createElement('INPUT');
+        const $inputElements = document.getElementsByTagName('INPUT');
+        console.log($inputElements);
+        document.getElementById('form-name').appendChild($newInput)
+        console.log($inputElements);
+        const $updatedInputElements = document.getElementsByTagName('INPUT')
+        console.log($updatedInputElements);
+
+        class MyHtmlClass extends HTMLElement {
+            constructor(name) {
+                super();
+                this.name = name
+            }
+        }
+        customElements.define('my-html-class', MyHtmlClass);
+
+        // Creando una instancia del elemento personalizado
+        const myInstance = new MyHtmlClass();
+        console.log(Object.getPrototypeOf(MyHtmlClass)); // Function.prototype
+        console.log(Object.getPrototypeOf(myInstance)); // MyHtmlClass.prototype
+    </script>
+</body>
+</html>
