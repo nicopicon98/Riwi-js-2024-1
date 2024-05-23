@@ -130,12 +130,12 @@ Ahora vamos a ejecutar el archivo rest.http, para ello vamos a hacer click derec
 
 Segun el mismo archivo database.json o database.json5, podemos eejcutar 6 verbos HTTP
 
-- GET /posts
-- GET /posts/:id
-- POST /posts
-- PUT /posts/:id
-- PATCH /posts/:id
-- DELETE /posts/:id
+- GET /posts -> Se utiliza para obtener todos los posts
+- GET /posts/:id -> Se utiliza para obtener un post en especifico
+- POST /posts -> Se utiliza para crear un post
+- PUT /posts/:id -> Se utiliza para actualizar un post y si no existe, lo crea
+- PATCH /posts/:id -> Se utiliza para actualizar una propiedad de un post
+- DELETE /posts/:id -> Se utiliza para eliminar un posts
 
 Es recomendable que lean la documentacion oficial de JSON-SERVER, la cual esta en el siguiente enlace: [JSON-SERVER](https://github.com/typicode/json-server/tree/v0)
 

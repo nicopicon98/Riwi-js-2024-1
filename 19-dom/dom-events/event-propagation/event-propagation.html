@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="outer">
+        <div id="inner">
+            <button id="myButton">Click me</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById('outer').addEventListener('click', function (event) {
+            console.log('Outer div clicked (capturing)', phaseCapture(event.eventPhase));
+        }, true); // `true` indica que es en la fase de captura
+
+        document.getElementById('inner').addEventListener('click', function (event) {
+            console.log('Inner div clicked (capturing)', phaseCapture(event.eventPhase));
+        }, true); // `true` indica que es en la fase de captura
+
+        document.getElementById('myButton').addEventListener('click', function (event) {
+            console.log('Button clicked (target)', phaseCapture(event.eventPhase));
+        }); // No se especifica la fase, por lo que es en la fase de objetivo
+
+        document.getElementById('inner').addEventListener('click', function (event) {
+            console.log('Inner div clicked (bubbling)', phaseCapture(event.eventPhase));
+        }, false); // `false` indica que es en la fase de burbujeo
+
+        document.getElementById('outer').addEventListener('click', function (event) {
+            console.log('Outer div clicked (bubbling)', phaseCapture(event.eventPhase));
+        }, false); // `false` indica que es en la fase de burbujeo
+
+        function phaseCapture(eventPhase) {
+            switch (eventPhase) {
+                case 1:
+                    return 'en fase de captura';
+                case 2:
+                    return 'en el objetivo';
+                case 3:
+                    return 'en fase de burbujeo';
+                default:
+                    return 'no phase';
+            }
+        }
+
+    </script>
+</body>
+
+</html>

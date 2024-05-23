@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="outer">
+        <div id="inner">
+            <button id="myButton">Click me</button>
+        </div>
+    </div>
+    <button id="mySecondButton">Click me</button>
+    <script>
+        document.getElementById('outer').addEventListener('click', function (event) {
+            const {eventPhase, type, timeStamp, isTrusted} = event;
+            console.log('Capturing: Outer div clicked');
+            console.log({eventPhase, type, timeStamp, isTrusted});
+        }, true); // Recordemos que true indica que es en la fase de captura
+
+        document.getElementById('outer').addEventListener('click', function (event) {
+            console.log('Bubbling: Outer div clicked');
+        }, false); // Recordemos que true indica que es en la fase de captura
+
+        document.getElementById('inner').addEventListener('click', function (event) {
+            console.log('Capturing: Inner div clicked');
+            
+        }, true); // Recordemos que true indica que es en la fase de captura
+
+        document.getElementById('myButton').addEventListener('click', function (event) {
+            console.log('Objective: Button clicked');
+            console.log(event.eventPhase);
+        }); // Recordemos que true indica que es en la fase de captura
+
+        // ahora, lancemos un evento con dispatchEvent y checkeemos la propiedad isTrusted
+        const myButton = document.getElementById('mySecondButton');
+       
+    </script>
+</body>
+
+</html>
