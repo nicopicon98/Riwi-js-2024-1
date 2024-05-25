@@ -20,7 +20,7 @@
 
 ## Requerimientos del taller
 
-- Crear un proyecto con la estructura de archivos y carpetas que hemos utilizado en nuestras aplicaciones SPA.\
+- Crear un proyecto con la estructura de archivos y carpetas que hemos utilizado en nuestras aplicaciones SPA.
 - Crear un repositorio en GitHub con el nombre "final-workshop".
 - La aplicacion debe ingresar por app/index.js.
 - La aplicacion debe tener un archivo en la ruta raiz /index.html.
@@ -55,7 +55,7 @@
 - Un usuario esta autenticado solo si existe un token en localStorage.
 - Si la peticion falla, por cualquier motivo, se debe mostrar un mensaje de error con el texto "Usuario o contraseña incorrectos" y prevenir el envio del formulario y evitar recargar la pagina.
 
-### Vista de tareas (publica) /tasks
+### Vista de tareas (privada) /tasks
 
 - La vista de tareas debe tener un navbar fijo en la parte superior con tres opciones:
   - Usuarios
@@ -79,7 +79,7 @@
     - Inactivar
       - Al hacer click en el boton de inactivar, se debe cambiar el estado de la tarea a inactiva.
 
-## Vista de usuarios con sus respectivas tareas (privada) /users
+### Vista de usuarios con sus respectivas tareas (privada) /users
 
 - Crear una vista de usuarios con sus respectivas tareas.
 - La vista de tareas debe tener un navbar fijo en la parte superior con tres opciones:

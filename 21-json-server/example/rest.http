@@ -1,1 +1,40 @@
+## CRUD a posts
+
+### Create a post
+POST http://localhost:3000/posts
+Content-Type: application/json
+
+{
+    "title": "Post 1",
+    "author": "Author 1"
+}
+### Read all posts
 GET http://localhost:3000/posts
+
+### Read a post
+GET http://localhost:3000/posts/1
+
+### Find a post by title
+
+GET http://localhost:3000/posts?title=json-server
+
+### Actualizar un post existente
+PUT http://localhost:3000/posts/1
+Content-Type: application/json
+
+Authorization: Bearer your_token_here
+
+{
+    "title": "Post 1-updated",
+    "author": "Author 1-updated"
+}
+
+DELETE http://localhost:3000/posts/1
+
+### Actualizar un post existente
+PATCH http://localhost:3000/posts/1
+Content-Type: application/json
+
+{
+    "title": "Post 1-updated-again"
+}

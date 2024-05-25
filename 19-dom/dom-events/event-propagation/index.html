@@ -10,34 +10,41 @@
 <body>
     <div id="outer">
         <div id="inner">
-            <button id="myButton">Click me</button>
+            <button id="myButton">Click me 1</button>
         </div>
     </div>
-    <button id="mySecondButton">Click me</button>
+    <form id="my-form">
+        <button type="submit">Enviar</button>
+    </form>
     <script>
         document.getElementById('outer').addEventListener('click', function (event) {
-            const {eventPhase, type, timeStamp, isTrusted} = event;
+            const { eventPhase, type, timeStamp, isTrusted } = event;
             console.log('Capturing: Outer div clicked');
-            console.log({eventPhase, type, timeStamp, isTrusted});
+            console.log({ eventPhase, type, timeStamp, isTrusted });
         }, true); // Recordemos que true indica que es en la fase de captura
 
         document.getElementById('outer').addEventListener('click', function (event) {
             console.log('Bubbling: Outer div clicked');
-        }, false); // Recordemos que true indica que es en la fase de captura
+        }, false); // Recordemos que false indica que es en la fase de burbujeo
 
         document.getElementById('inner').addEventListener('click', function (event) {
             console.log('Capturing: Inner div clicked');
-            
+
         }, true); // Recordemos que true indica que es en la fase de captura
 
         document.getElementById('myButton').addEventListener('click', function (event) {
             console.log('Objective: Button clicked');
-            console.log(event.eventPhase);
+            console.log('fase:', event.eventPhase);
         }); // Recordemos que true indica que es en la fase de captura
 
         // ahora, lancemos un evento con dispatchEvent y checkeemos la propiedad isTrusted
-        const myButton = document.getElementById('mySecondButton');
-       
+        const $myForm = document.getElementById('my-form')
+        $myForm.addEventListener('submit', e => {
+            e.preventDefault()
+        }, {
+            once: true
+        })
+
     </script>
 </body>
 

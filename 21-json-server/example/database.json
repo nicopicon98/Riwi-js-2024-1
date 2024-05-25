@@ -1,64 +1,69 @@
 {
   "posts": [
     {
-      "id": 2,
+      "id": "2",
       "title": "json-server",
       "author": "typicode"
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "json-server",
       "author": "typicode"
     },
     {
       "title": "json-server-updated-1",
       "author": "typicode-updated-2",
-      "id": 4
+      "id": "4"
     },
     {
-      "id": 1,
-      "title": "json-server-updated-1",
-      "author": "typicode-updated-2"
-    },
-    {
-      "title": "json-server-updated-1",
-      "author": "typicode-updated-2",
-      "id": 6
+      "title": "Post 1-updated-again",
+      "author": "Author 1-updated",
+      "id": "1"
     },
     {
       "title": "json-server-updated-1",
       "author": "typicode-updated-2",
-      "id": 7
+      "id": "6"
     },
     {
       "title": "json-server-updated-1",
       "author": "typicode-updated-2",
-      "id": 8
+      "id": "7"
     },
     {
       "title": "json-server-updated-1",
       "author": "typicode-updated-2",
-      "id": 9
+      "id": "8"
     },
     {
       "title": "json-server-updated-1",
       "author": "typicode-updated-2",
-      "id": 10
+      "id": "9"
+    },
+    {
+      "title": "json-server-updated-1",
+      "author": "typicode-updated-2",
+      "id": "10"
+    },
+    {
+      "id": "7354",
+      "title": "Post 1",
+      "author": "Author 1"
     }
   ],
   "comments": [
     {
-      "id": 4,
+      "id": "4",
       "body": "some comment",
       "postId": 2
     },
     {
-      "id": 5,
+      "id": "5",
       "body": "some comment",
       "postId": 2
     },
     {
-      "id": 6,
+      "id": "6",
       "body": "some comment",
       "postId": 2
     }

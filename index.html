@@ -1,3 +1,4 @@
+<!--Test gorilla 2do punto, operacion fija-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,77 +7,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #box {
-            display: flex;
-            opacity: 1;
-            align-items: center;
-            font-size: 3.6rem;
-            transition: all 1s;
-            padding: 15px;
-            padding-top: 0;
-        }
-
-        div.container {
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
+       
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <img src="https://riwi.io/wp-content/uploads/2023/07/Fondo-claro-logo.png" alt="logo" style="width: 500px">
-        <div id="box">
-
-        </div>
-    </div>
-
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const box = document.getElementById("box");
-            const boxH1 = document.createElement("p");
-            boxH1.style.color = "#6B5CFF";
-            boxH1.style.fontSize = "4.8rem";
-            boxH1.style.fontFamily = "Arial";
-            boxH1.style.margin = "0";
-            box.appendChild(boxH1);
 
-            const text = "Welcome to the JavaScript world!";
-            let index = 0;
-            let reverse = false;
+        const case1 = "34+" // 7
+        const case2 = "34+43+-" // 0 
 
-            function typeWriter() {
-                if (!reverse) {
-                    if (index < text.length) {
-                        if (text.charAt(index) === " ") {
-                            boxH1.innerHTML += text.charAt(index);
-                            index++;
-                            typeWriter();
-                            return;
-                        }
-                        boxH1.innerHTML += text.charAt(index);
-                        index++;
-                    } else {
-                        reverse = true;
-                    }
+        function calculateString(case1){
+            const stack = []
+
+            for (let i = 0; i < case1.length; i++) {
+                const element = case1[i];
+                if (element === "+") {
+                    const a = stack.pop() // recordar que el pop saca el ultimo elemento del array
+                    const b = stack.pop()
+                    stack.push(a + b)
+                } else if (element === "-") {
+                    const a = stack.pop()
+                    const b = stack.pop()
+                    stack.push(b - a)
+                } else if (element === "*") {
+                    const a = stack.pop()
+                    const b = stack.pop()
+                    stack.push(a * b)
+                } else if (element === "/") {
+                    const a = stack.pop()
+                    const b = stack.pop()
+                    stack.push(b / a) // recordar que la division es el segundo numero entre el primero
                 } else {
-                    if (index > 0) {
-                        boxH1.innerHTML = boxH1.innerHTML.slice(0, -1);
-                        index--;
-                    } else {
-                        reverse = false;
-                    }
+                    stack.push(parseInt(element))
                 }
-                setTimeout(typeWriter, 300);
             }
+            console.log(stack);
+            return stack[0] // 7
+        }
 
-            typeWriter();
-        });
-    </script>
+        console.log(calculateString(case1));
+        console.log(calculateString(case2));
+
     </script>
 </body>
 
