@@ -1,0 +1,25 @@
+### Posts
+GET http://localhost:4000/posts
+
+POST http://localhost:4000/posts
+Content-Type: application/json
+
+{
+  "title": "json-server",
+  "author": "typicode"
+}
+
+PUT http://localhost:4000/posts/1
+Content-Type: application/json
+
+{
+  "title": "json-server",
+  "author": "typicode"
+}
+
+
+### Comments
+GET http://localhost:4000/comments
+
+### Profile
+GET http://localhost:4000/profiles
